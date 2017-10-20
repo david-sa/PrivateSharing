@@ -1,0 +1,49 @@
+@import './src/styles';
+
+.navbar {
+
+  button {
+    cursor: pointer;
+    outline: none;
+  }
+
+  .nav-link {
+    cursor: pointer;
+    margin: 0 1rem;
+
+    &:hover {
+      color: black;
+      font-style: bold;
+    }
+  }
+
+  // Attention: hack!
+  // ngb-collapse is not notified when the screen goes under the breakpoint 
+  @media only screen and (max-width: 575px) { // 576 = sm
+    button {
+      z-index: 1;
+    }
+    .navbar-nav {
+      background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));
+      align-items: center;
+      margin-top: -40px; // button-size
+      border-radius: 5px;
+    } 
+    .nav-link {
+      color: rgba(0,0,0,.7);
+    }
+  }  
+}
+
+/* This class is added to the body via Renderer2 in home.components.ts */
+
+.home-navbar {
+  position: absolute;
+  width: 100%;
+  background-color: transparent;
+
+  .navbar-brand {
+    display: none;
+  }
+}
+
