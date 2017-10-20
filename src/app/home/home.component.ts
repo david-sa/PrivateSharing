@@ -13,4 +13,8 @@ export class HomeComponent implements OnInit {
     this.renderer.addClass(document.getElementsByClassName( 'navbar' )[0], 'home-navbar');
   }
 
+  ngOnDestroy() {
+    this.renderer.removeClass(document.getElementsByClassName( 'navbar' )[0], 'home-navbar');
+  }
+
 }
