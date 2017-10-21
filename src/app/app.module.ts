@@ -15,6 +15,7 @@ import { DownloadComponent } from './download/download.component';
 import { WhyComponent } from './why/why.component';
 import { CodeComponent } from './code/code.component';
 import { SupportComponent } from './support/support.component';
+import { PopoverComponent } from './popover/popover.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SupportComponent } from './support/support.component';
     DownloadComponent,
     WhyComponent,
     CodeComponent,
-    SupportComponent
+    SupportComponent,
+    PopoverComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,12 @@
+@import './src/styles';
+
+::ng-deep ngb-popover-window {
+
+  .popover-body {
+    background-color: $light-primary-color;
+  }
+
+  .arrow::after {
+    border-top-color: $light-primary-color !important;
+  }
+}
