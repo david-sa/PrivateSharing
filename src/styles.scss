@@ -1,11 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 
-/* Colors */
+/* Variables */
 
 $primary-color: #03A9F4; // 3 - 169 - 244
 $light-primary-color: #B3E5FC;
 $dark-primary-color: #0288D1;
 $accent-color: #CDDC39;
 $background-dark: #303030;
-
 $primary-text: #212529;
+
+$footer-height: 240px;
+
+/* General */
+
+body {
+  position: relative;
+  min-height: calc( 100vh - #{$footer-height} ); // Flushing footer
+}

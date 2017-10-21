@@ -1,6 +1,9 @@
 @import './src/styles';
 
 footer {
+  position: absolute;
+  bottom: -$footer-height;
+  width: 100%;
   background-color: $background-dark;
   color: #808080;
 
