@@ -1,3 +1,27 @@
-<p>
-  download works!
-</p>
+<section class="container">
+  <div class="row">
+    <div class="col">
+      <p>Choose the platform corresponding to your device and install the app, 
+        it will take you less than a minute.
+      </p>
+      <app-popover #popover></app-popover>
+      <div class="d-flex justify-content-around app-stores">
+        <img src="/assets/images/app/BlueStore.png"
+          [popoverTitle]="popover.title"
+          [ngbPopover]="popover.template"
+          placement="top">
+        <img src="/assets/images/app/YellowApps.png"
+          [popoverTitle]="popover.title"
+          [ngbPopover]="popover.template"
+          placement="top">
+      </div>
+      <p>
+        You are just two clicks away from rediscovering privacy.
+        And the best is: <i>it is <b>completly free</b></i>. 
+      </p>
+      <p>
+        Enjoy it!
+      </p>
+    </div>
+  </div>
+</section>

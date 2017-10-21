@@ -2,6 +2,10 @@
 
 .navbar {
 
+  .navbar-brand {
+    color: $primary-color;
+  }
+
   button {
     cursor: pointer;
     outline: none;
