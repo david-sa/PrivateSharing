@@ -1,8 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 
+/* Import and override Bootstrap */
+
+$blue: #03A9F4; // 3 - 169 - 244
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+
 /* Variables */
 
-$primary-color: #03A9F4; // 3 - 169 - 244
+$primary-color: $blue;
 $light-primary-color: #B3E5FC;
 $dark-primary-color: #0288D1;
 $accent-color: #CDDC39;
