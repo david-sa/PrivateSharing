@@ -1,0 +1,27 @@
+@import './src/styles';
+
+.row {
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+
+.github-link {
+  margin: 4rem 0;
+
+  a {
+    color: $primary-text;
+    
+    :hover {
+      color: $primary-color;
+    }
+  }
+  
+  .fa-github {
+    font-size: 10rem;
+  }
+  
+  .footnote {
+    font-size: small;
+    color: $soft-text;
+  }
+}
