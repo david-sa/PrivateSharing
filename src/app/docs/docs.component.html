@@ -1,3 +1,125 @@
-<p>
-  docs works!
-</p>
+<section class="container">
+    <div class="row">
+      <div class="col">
+        <p>
+          Whether you want to start to use PrivateSharing or to tinker with the source code,
+          here you will find all the information you need.
+        </p>
+        <ng-template #rt let-r="result" let-t="term">
+          <i>{{ r.tab == "tab1" ? "User Manual" : "Developers Guide" }}</i>: <b>{{ r.name }}</b>
+        </ng-template>        
+        <label for="typeahead-template">Search for a chapter:</label>
+        <input id="typeahead-template" type="text" class="form-control" 
+          [ngModel]="model" (ngModelChange)="updateModel($event)"
+          [ngbTypeahead]="search" [resultTemplate]="rt" [inputFormatter]="formatter" />
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <ng-template #dummyContent>
+          <p>Hi there!</p>
+          <p>This is an amazing piece of content.</p>
+          <p>Hopefully we will soon translated from latin ;)</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulum lacus nec ultricies vestibulum. Donec porta tortor mi, vel rhoncus dolor mattis eu. Nunc ligula lorem, ultrices at aliquet eu, fermentum a mauris. Donec a nisl eu dolor rutrum cursus dapibus non nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque a metus nunc. Praesent auctor id neque ac lobortis. Nulla ornare fermentum odio venenatis blandit.</p>
+          <p>Nulla ornare maximus imperdiet. Duis fringilla lorem eu sapien fermentum placerat. Fusce non justo convallis, tristique metus sit amet, tempus augue. Pellentesque dapibus non metus sit amet facilisis. Nulla rhoncus pellentesque enim, nec maximus urna. Integer vulputate nisi neque, a maximus dolor vestibulum quis. Quisque mollis est nec quam sagittis tincidunt. Donec commodo eget odio vitae sodales. Morbi pretium in dui vel tristique. Praesent ac magna cursus dui interdum pretium. Integer euismod nunc eget accumsan luctus.</p>
+        </ng-template>  
+        <ngb-tabset #tabset="ngbTabset" [destroyOnHide]="false">
+            <ngb-tab  id="tab1">
+              <ng-template ngbTabTitle>
+                <i class="fa fa-book"></i> User Manual
+              </ng-template>
+              <ng-template ngbTabContent>
+  
+                <ngb-accordion #acc1="ngbAccordion" [closeOthers]="true" activeIds="t1-static-1">
+                  <ngb-panel id="t1-static-1" title="Overview">
+                    <ng-template ngbPanelContent>
+                      <p>Welcome to an overview of the User Manual</p>
+                      <p>In the next chapters you would learn how to install and use the app.</p>
+                      <p>Don't be shy and go ahead!</p>
+                    </ng-template>
+                  </ngb-panel>
+                  <ngb-panel id="t1-static-2" title="Download">
+                    <ng-template ngbPanelContent>
+                      <div *ngTemplateOutlet="dummyContent"></div>
+                    </ng-template>
+                  </ngb-panel>
+                  <ngb-panel id="t1-static-3" title="Adding content">
+                    <ng-template ngbPanelContent>
+                      <div *ngTemplateOutlet="dummyContent"></div>
+                    </ng-template>
+                  </ngb-panel>
+                  <ngb-panel id="t1-static-4" title="Adding contacts">
+                    <ng-template ngbPanelContent>
+                      <div *ngTemplateOutlet="dummyContent"></div>
+                    </ng-template>
+                  </ngb-panel>
+                  <ngb-panel id="t1-static-5" title="Creating groups">
+                    <ng-template ngbPanelContent>
+                      <div *ngTemplateOutlet="dummyContent"></div>
+                    </ng-template>
+                  </ngb-panel>
+                  <ngb-panel id="t1-static-6" title="Sharing content">
+                    <ng-template ngbPanelContent>
+                      <div *ngTemplateOutlet="dummyContent"></div>
+                    </ng-template>
+                  </ngb-panel>
+                  <ngb-panel id="t1-static-7" title="Setting up a custom server">
+                    <ng-template ngbPanelContent>
+                      <div *ngTemplateOutlet="dummyContent"></div>
+                    </ng-template>
+                  </ngb-panel>
+                </ngb-accordion>
+  
+              </ng-template>
+            </ngb-tab>
+            <ngb-tab id="tab2">
+              <ng-template ngbTabTitle>
+                  <i class="fa fa-code"></i> Developers guide
+              </ng-template>
+              <ng-template ngbTabContent>
+
+                <ngb-accordion #acc2="ngbAccordion" [closeOthers]="true" activeIds="t2-static-1">
+                    <ngb-panel id="t2-static-1" title="Overview">
+                      <ng-template ngbPanelContent>
+                        <p>Welcome developer.</p>
+                        <p>In the next chapters you would learn the basis of PrivateSharing.</p>
+                        <p>If you encounter any trouble, please note that the issue tracker is
+                          <b>just for issues</b>, post your questions in
+                          <a href="https://stackoverflow.com">StackOverflow</a>.
+                        </p>
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="t2-static-2" title="Getting started">
+                      <ng-template ngbPanelContent>
+                        <div *ngTemplateOutlet="dummyContent"></div>
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="t2-static-3" title="Fundamentals">
+                      <ng-template ngbPanelContent>
+                        <div *ngTemplateOutlet="dummyContent"></div>
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="t2-static-4" title="Encryption methods">
+                      <ng-template ngbPanelContent>
+                        <div *ngTemplateOutlet="dummyContent"></div>
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="t2-static-5" title="Techniques">
+                      <ng-template ngbPanelContent>
+                        <div *ngTemplateOutlet="dummyContent"></div>
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="t2-static-6" title="API">
+                      <ng-template ngbPanelContent>
+                        <div *ngTemplateOutlet="dummyContent"></div>
+                      </ng-template>
+                    </ngb-panel>
+                  </ngb-accordion>
+        
+              </ng-template>
+            </ngb-tab>
+          </ngb-tabset>        
+      </div>
+    </div>
+  </section>

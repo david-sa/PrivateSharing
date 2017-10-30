@@ -1,0 +1,28 @@
+@import './src/styles';
+
+::ng-deep ngb-tabset {
+  margin: 5rem;
+
+  .nav-link {
+    color: inherit;
+    font-size: 2rem;
+
+    i.fa {
+     color: $primary-color; 
+    }      
+
+    &.active {
+      color: black !important;
+      font-weight: bold;
+      outline: none;
+    }
+  }
+}
+
+::ng-deep .dropdown-item:not(.active) b {
+  color: $primary-color;
+}
+
+.row:first-child {
+  margin: 50px 0 20px 0;
+}
