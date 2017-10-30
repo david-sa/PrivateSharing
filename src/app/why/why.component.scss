@@ -1,0 +1,18 @@
+@import './src/styles';
+
+section {
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+
+blockquote {
+  border: 1px solid $accent-color;
+  font-family: "Courier New", Courier, monospace;
+  font-size: small;
+  padding: 1rem;
+
+  cite {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
