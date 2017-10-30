@@ -1,3 +1,51 @@
-<p>
-  support works!
-</p>
+<section class="container">
+  <div class="row">
+      <div class="col col-md-6 d-flex flex-column">
+        <p class="col-header">
+          Do you have any question about how to use PrivateSharing?
+        </p>
+        <p>
+          Ask in the forums!
+        </p>
+        <div class="support-link d-flex align-items-center flex-column">
+          <app-popover #popover></app-popover>
+          <a [popoverTitle]="popover.title" [ngbPopover]="popover.template" placement="top">
+            <i class="fa fa-users"></i>
+          </a>
+          <p><i class="footnote">(Click here to go to the forums)</i></p>
+        </div>
+      </div>
+      <div class="col col-md d-flex flex-column">
+        <p class="col-header">
+          And if you are a developer, post your question on StackOverflow and
+          include the PrivateSharing tag.
+        </p>
+        <div class="support-link d-flex align-items-center flex-column">
+          <a href="https://stackoverflow.com/questions/ask">
+            <i class="fa fa-stack-overflow"></i>
+          </a>
+          <p><i class="footnote">(Click here to go to StackOverflow)</i></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+    <div class="col">
+      <p>
+        Did you find a bug on PrivateSharing? Are you missing any feature?
+      </p>
+      <p>
+        Use out issue tracker on Github to notify it.
+        We will try to fix it ASAP.
+      </p>
+      <p>
+        Please note that you will need a GitHub account to create or comment issues.
+      </p>
+      <div class="support-link d-flex align-items-center flex-column">
+        <a href="https://github.com/david-sa/PrivateSharing/issues">
+          <i class="fa fa-github"></i>
+        </a>
+        <p><i class="footnote">(Click here to go to the issue tracker)</i></p>
+      </div>
+    </div>
+  </div>
+</section>

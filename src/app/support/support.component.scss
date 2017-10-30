@@ -1,0 +1,36 @@
+@import './src/styles';
+
+section {
+  margin-top: 50px;
+}
+
+p {
+  text-align: center;
+}
+
+.col-header {
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+.support-link {
+  margin: 4rem 0;
+  
+  a {
+    color: $primary-text;
+    cursor: pointer;
+
+    :hover {
+      color: $primary-color;
+    }
+  }
+  
+  .fa {
+    font-size: 10rem;
+  }
+  
+  .footnote {
+    font-size: small;
+    color: $soft-text;
+  }
+}
