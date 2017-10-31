@@ -1,0 +1,19 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background-color: rgba( 255, 255, 255, 0.99);
+}
+
+.btn {
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+hr {
+  // https://stackoverflow.com/a/34372979/5247200
+  width: 100%;
+}

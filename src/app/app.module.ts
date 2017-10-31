@@ -17,6 +17,7 @@ import { WhyComponent } from './why/why.component';
 import { CodeComponent } from './code/code.component';
 import { SupportComponent } from './support/support.component';
 import { PopoverComponent } from './popover/popover.component';
+import { MessageComponent } from './message/message.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { PopoverComponent } from './popover/popover.component';
     WhyComponent,
     CodeComponent,
     SupportComponent,
-    PopoverComponent
+    PopoverComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
