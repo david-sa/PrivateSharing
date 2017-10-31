@@ -5,15 +5,19 @@
         it will take you less than a minute.
       </p>
       <app-popover #popover></app-popover>
-      <div class="d-flex justify-content-around app-stores">
-        <img class="fade-up" src="/assets/images/app/BlueStore.png"
+      <div class="row app-stores">
+        <div class="col-md-6">
+          <img class="fade-up d-block mx-auto" src="/assets/images/app/BlueStore.png"
           [popoverTitle]="popover.title"
           [ngbPopover]="popover.template"
           placement="top">
-        <img class="fade-up" style="transform: 'translateY(100px)';" src="/assets/images/app/YellowApps.png"
-          [popoverTitle]="popover.title"
-          [ngbPopover]="popover.template"
-          placement="top">
+        </div>
+        <div class="col-md-6">
+          <img class="fade-up d-block mx-auto" src="/assets/images/app/YellowApps.png"
+            [popoverTitle]="popover.title"
+            [ngbPopover]="popover.template"
+            placement="top">
+        </div>
       </div>
       <p>
         You are just two clicks away from rediscovering privacy.

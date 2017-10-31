@@ -6,6 +6,7 @@
   height: 100vh;
   z-index: 10;
   background-color: rgba( 255, 255, 255, 0.99);
+  font-size: 0.8rem;
 }
 
 .btn {
@@ -16,4 +17,10 @@
 hr {
   // https://stackoverflow.com/a/34372979/5247200
   width: 100%;
+}
+
+@media only screen and (min-width: 576px) { // 576 = sm
+  .overlay {
+    font-size: 1rem;
+  }
 }

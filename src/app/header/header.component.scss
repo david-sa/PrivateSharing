@@ -32,13 +32,19 @@
     .navbar-nav {
       background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));
       align-items: center;
-      margin-top: -40px; // button-size
       border-radius: 5px;
     } 
     .nav-link {
       color: rgba(0,0,0,.7);
     }
   }  
+
+  // Just if there is enough space for .navbar-brand 
+  @media only screen and (min-width: 375px) and (max-width: 575px) { // 576 = sm
+    .navbar-nav {
+      margin-top: -40px; // button-size
+    }
+  }
 }
 
 /* This class is added to the body via Renderer2 in home.components.ts */
