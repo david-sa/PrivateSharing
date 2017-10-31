@@ -9,10 +9,10 @@ import { SupportComponent } from '../support/support.component';
 
 export const routes: Routes = [
   { path: 'home',     component: HomeComponent },
-  { path: 'download', component: DownloadComponent },
-  { path: 'why',      component: WhyComponent },
-  { path: 'docs',     component: DocsComponent },
-  { path: 'code',     component: CodeComponent },
-  { path: 'support',  component: SupportComponent },
+  { path: 'download', component: DownloadComponent, data: { state: 'download' } },
+  { path: 'why',      component: WhyComponent,      data: { state: 'why' } },
+  { path: 'docs',     component: DocsComponent,     data: { state: 'docs' } },
+  { path: 'code',     component: CodeComponent,     data: { state: 'code' } },
+  { path: 'support',  component: SupportComponent,  data: { state: 'support' } },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];

@@ -4,6 +4,7 @@
 
   .navbar-brand {
     color: $primary-color;
+    outline: none;
   }
 
   button {
@@ -14,10 +15,11 @@
   .nav-link {
     cursor: pointer;
     margin: 0 1rem;
+    outline: none;
 
     &:hover {
-      color: black;
-      font-style: bold;
+      color: black !important;
+      font-style: bold !important;
     }
   }
 
